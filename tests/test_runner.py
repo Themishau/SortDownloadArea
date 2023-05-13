@@ -4,6 +4,6 @@ from Pathrunner import Pathrunner
 class TestPathrunner:
 
     def test_Pathrunner(self):
-        thisdir = "C:/Users/Markus Zajkowski/Downloads/ANime"
+        thisdir = "C:/Users/XXX/Downloads/ANime"
         pathrunner = Pathrunner(thisdir)
 
