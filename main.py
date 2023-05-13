@@ -2,7 +2,7 @@ from Pathrunner import Pathrunner
 
 def main():
     # Getting the directory
-    thisdir = "C:/Users/Markus Zajkowski/Downloads/ANime"
+    thisdir = "C:/Users/XXX/Downloads/ANime"
     pathrunner = Pathrunner(thisdir)
     pathrunner.getRootFilesDirectories()
 
