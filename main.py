@@ -2,6 +2,7 @@ from Pathrunner import Pathrunner
 from DirectSorter import DirectSorter
 from addpathfile import reads
 from adddirectory import readt
+from PHCreater import DocxCreater
 def main():
     # Getting the directory
     thisdir = reads()
@@ -14,8 +15,9 @@ def main():
     pathrunner.runThroughFiles()
 
     directSorter = DirectSorter(pathrunner)
+    pPHCreater = DocxCreater(directSorter)
     # directSorter.checkCreateDir()
-    directSorter.readDocx()
+    pPHCreater.readDocx()
 
 
 # Press the green button in the gutter to run the script.

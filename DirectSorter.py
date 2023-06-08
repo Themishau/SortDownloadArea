@@ -1,5 +1,8 @@
+from copy import deepcopy
+from io import StringIO
 from Pathrunner import Pathrunner
 from dataclasses import dataclass, field
+from abc import ABC, abstractmethod
 import docx
 import string
 import logging
@@ -8,7 +11,7 @@ import asyncio
 
 
 @dataclass(slots=True)
-class DirectSorter:
+class DirectSorter(ABC):
     pathrunner: Pathrunner = field(default_factory=Pathrunner)
 
     def checkCreateDir(self):
@@ -16,10 +19,3 @@ class DirectSorter:
 
         return
 
-    def readDocx(self):
-        doc = docx.Document(self.pathrunner.path + "/" + "レジュメ - Kopie.docx")
-        all_paras = doc.paragraphs
-        len(all_paras)
-        for para in all_paras:
-            print(para.text)
-            print("-------")
