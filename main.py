@@ -17,7 +17,7 @@ def main():
     directSorter = DirectSorter(pathrunner)
     pPHCreater = DocxCreater(directSorter)
     # directSorter.checkCreateDir()
-    pPHCreater.readDocx()
+    pPHCreater.copyTestCasesToTestDoc()
 
 
 # Press the green button in the gutter to run the script.
